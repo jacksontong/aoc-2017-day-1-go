@@ -12,24 +12,29 @@ func Test_SumNext(t *testing.T) {
 		want int
 	}{
 		{
-			"1122",
-			args{nums: []int{1, 1, 2, 2}},
-			3,
+			"1212",
+			args{nums: []int{1, 2, 1, 2}},
+			6,
 		},
 		{
-			"1111",
-			args{nums: []int{1, 1, 1, 1}},
-			4,
-		},
-		{
-			"1234",
-			args{nums: []int{1, 2, 3, 4}},
+			"1221",
+			args{nums: []int{1, 2, 2, 1}},
 			0,
 		},
 		{
-			"91212129",
-			args{nums: []int{9, 1, 2, 1, 2, 1, 2, 9}},
-			9,
+			"123425",
+			args{nums: []int{1, 2, 3, 4, 2, 5}},
+			4,
+		},
+		{
+			"123123",
+			args{nums: []int{1, 2, 3, 1, 2, 3}},
+			12,
+		},
+		{
+			"12131415",
+			args{nums: []int{1, 2, 1, 3, 1, 4, 1, 5}},
+			4,
 		},
 	}
 	for _, tt := range tests {

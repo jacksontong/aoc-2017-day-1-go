@@ -6,13 +6,15 @@ package captcha
 func SumNext(nums ...int) int {
 	sumable := make([]int, 0)
 	sum := 0
+	length := len(nums)
+	step := length / 2
 
 	for i, n := range nums {
 		// if n == nums[i+1] then push n to sumable
 		// if i == len(nums) - 1 then compare n == nums[0]
-		next := i + 1
-		if next == len(nums) {
-			next = 0
+		next := i + step
+		if next >= length {
+			next = i - step
 		}
 
 		if n == nums[next] {
